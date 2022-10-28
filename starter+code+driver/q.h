@@ -1,34 +1,25 @@
-// File documentation block required
+/*!
+@file main.c
+@author Timothy Wong
+@course RSE1201
+@week 9
+@ass08
+@date 28/10/2022
+@brief This file contains the declarations for the functions find,
+       find_any, count, count_any, compare, exchange, and copy.
+*//*_____________________________________________________________*/
 
-// NOTE 1: This file should not contain any standard library includes.
-// The auto-grader will not accept your submission if this file
-// contains include directives.
+char const* find(char const *begin, char const *end, char val); //returns a pointer to the first occurrence of val in a half-open range of values
 
-// Now, declare the necessary functions.
+char const* find_any(char const *begin, char const *end, char const *vals, int len); //returns a pointer to the first occurrence of any member of the array whose first element is pointed to by pointer vals and has len number of elements in a half-open range of values.
 
-// NOTE 2: A function documentation block provides information that is crucial
-// for clients to correctly use the function. Provide a documention block
-// for each declared function that contains the following information:
-// What does the function do?
-// What are the (types) of the parameters?
-// What is the (type) of value returned by function?
-// Is there any particular input that will break the function?
+int count(char const *begin, char const *end, char val); //returns the number of elements in a half-open range of values equivalent to val
 
-// NOTE 3: When uploading this file for grading, make sure to remove
-// all references to the subscript operator or the [ or ] symbols. 
-// It is important that even your comments should not include these symbols.
+int count_any(char const *begin, char const *end, char const *vals, int len); //returns the number of elements in a half-open range of values equivalent to any member of the array whose first element is pointed to by parameter vals and has len number of elements.
 
-char const* find(char const *begin, char const *end, char val);
+int compare(char const *begin1, char const *begin2, int len); //compares corresponding elements in the arrays whose first elements are pointed to by begin1 and begin2 (both of which have len number of values) to determine if they contain the same values in the same order. If the contents of the two arrays are exactly similar, the function returns 0 . The function returns a negative value when an element in the array whose first element is pointed to by begin1 has a smaller value than the corresponding element in the array whose first element is pointed to by begin2 . Otherwise, the function returns a positive number
 
-char const* find_any(char const *begin, char const *end, char const *vals, int len);
+void exchange(char *begin1, char *begin2, int len); //swaps the values in the two arrays whose first elements are pointed to by begin1 and begin2 with both arrays containing count number of elements.
 
-int count(char const *begin, char const *end, char val);
-
-int count_any(char const *begin, char const *end, char const *vals, int len);
-
-int compare(char const *begin1, char const *begin2, int len);
-
-void exchange(char *begin1, char *begin2, int len);
-
-void copy(char *dst, char *src, int len);
+void copy(char *dst, char *src, int len); //copies len number of values starting from the element pointed to by src into corresponding elements pointed to by dst
 

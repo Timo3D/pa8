@@ -1,5 +1,4 @@
-GCC_OPTIONS = -std=c11
-TEMP = -pedantic-errors -Wstrict-prototypes -Wall -Wextra  -Werror -Werror=vla
+GCC_OPTIONS = -std=c11 -pedantic-errors -Wstrict-prototypes -Wall -Wextra  -Werror -Werror=vla
 OBJS = qdriver.o q.o
 EXEC = q.out
 
